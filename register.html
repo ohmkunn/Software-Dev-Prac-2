@@ -4,31 +4,13 @@
 <head>
     <meta charset="utf-8">
     <title>Around Thailand</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script src="register.js"></script>
 </head>
 
 <body>
@@ -53,33 +35,33 @@
     <form>
         <div class="form-group mb-2">
           <label>Company name</label>
-          <input type="email" class="form-control" placeholder="Enter company name">
-          <small id="emailHelp" class="form-text text-muted">Please check the spelling</small>
+          <input id = "company"class="form-control" placeholder="Enter company name">
+          <small class="form-text text-muted">Please check the spelling</small>
         </div>
         <div class="form-group mb-2">
             <label>Booth size</label>
-            <select class="form-control" id="exampleFormControlSelect1">
+            <select class="form-control">
               <option>10x10 Ft</option>
               <option>10x15 Ft</option>
             </select>
           </div>
         <div class="form-check mb-2">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <input type="checkbox" class="form-check-input">
           <label>If you need a table</label>
         </div>
         
         <div class="form-group mb-4">
             <label>Chair amount</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Chair amount">
+            <input id = "chair" class="form-control" id="chair" placeholder="Chair amount">
         </div>
         <div class="form-group mb-2">
             <label>Contact Person</label>
-            <input type="name" class="form-control" placeholder="Name">
-            <small id="contact name" class="form-text text-muted">Name</small>
-            <input type="phone number" class="form-control" placeholder="Phone Number">
-            <small id="emailHelp" class="form-text text-muted">Phone Number</small>
+            <input id = "contactName" type="name" class="form-control" placeholder="Name">
+            <small>Name</small>
+            <input id= "phoneNumber" type="phone number" class="form-control" placeholder="Phone Number">
+            <small>Phone Number</small>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" onclick="validateForm()">Submit</button>
     </form>
     </div>
     <!-- Form -->
