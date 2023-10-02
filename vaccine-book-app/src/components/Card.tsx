@@ -40,7 +40,8 @@ export default function Card({ Name, imgSrc, onCompare, Ratinglist }: { Name: st
                     name="simple-controlled"
                     value={ratingValue}
                     precision={0.5}
-                    onChange={(e, newValue) => handleRatingChange(newValue)}
+                    onChange={(e, newValue) => {handleRatingChange(newValue)}}
+                    onClick={(e) => {e.stopPropagation()}}
                 />
             </div>
         </InteractiveCard>
