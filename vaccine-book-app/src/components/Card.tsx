@@ -3,21 +3,23 @@ import Image from 'next/image';
 import InteractiveCard from './InteractiveCard';
 import { Rating, Typography } from '@mui/material';
 
-export default function Card({ Name, imgSrc, onCompare, Ratinglist }: { Name: string, imgSrc: string, onCompare: Function,Ratinglist: Map<string, number>  }) {
-    const [ratingValue, setRatingValue] = useState<number>(0); // Initialize with your desired default value
+export default function Card({ Name, imgSrc, onCompare, Ratinglist }: { Name: string, imgSrc: string, onCompare?: Function,Ratinglist: Map<string, number>  }) {
+    // const [ratingValue, setRatingValue] = useState<number>(0); // Initialize with your desired default value
     
-    const handleRatingChange = (newValue: number | null) => {
-        if (newValue !== null) {
-            setRatingValue(newValue);
-            onCompare(Name, newValue); // Pass both the Name and the new rating value to the parent
-        }
-    };
+    // const handleRatingChange = (newValue: number | null) => {
+    //     if (newValue !== null) {
+    //         setRatingValue(newValue);
+    //         if(onCompare){
+    //             onCompare(Name, newValue); // Pass both the Name and the new rating value to the parent
+    //         }
+    //     }
+    // };
 
-    useEffect(() => {
-        if(!Ratinglist.has(Name)){
-            setRatingValue(0); // Reset the rating to 0 when the component mounts or when the Name prop changes
-        }
-    }, [Ratinglist]);
+    // useEffect(() => {
+    //     if(!Ratinglist.has(Name)){
+    //         setRatingValue(0); // Reset the rating to 0 when the component mounts or when the Name prop changes
+    //     }
+    // }, [Ratinglist]);
 
     return (
         <InteractiveCard>
@@ -34,7 +36,7 @@ export default function Card({ Name, imgSrc, onCompare, Ratinglist }: { Name: st
                 <h3 className='font-semibold'>{Name}</h3>
                 <p>click for more detail.</p>
             </div>
-            <div className='px-4'>
+            {/* <div className='px-4'>
                 <Typography component="legend">Rating</Typography>
                 <Rating
                     name="simple-controlled"
@@ -43,7 +45,7 @@ export default function Card({ Name, imgSrc, onCompare, Ratinglist }: { Name: st
                     onChange={(e, newValue) => {handleRatingChange(newValue)}}
                     onClick={(e) => {e.stopPropagation()}}
                 />
-            </div>
+            </div> */}
         </InteractiveCard>
     );
 }

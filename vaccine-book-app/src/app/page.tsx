@@ -9,7 +9,6 @@ export default function Home() {
     <main>
       <Banner/>
       <PromoteCard></PromoteCard>
-      {/* <Panel/> */}
     </main>
   )
 }
