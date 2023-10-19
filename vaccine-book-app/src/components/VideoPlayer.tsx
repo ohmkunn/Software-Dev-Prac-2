@@ -6,7 +6,7 @@ export default function VideoPlayer(
     {vdoSrc, isPlaying}: {vdoSrc:string, isPlaying:boolean}) {
         const vdoRef = useRef<HTMLVideoElement>(null)
         
-        useWindowListener('contextmenu',(e)=> e.preventDefault())
+        // useWindowListener('contextmenu',(e)=> e.preventDefault())
         
         useEffect(()=>{
             // alert('width is ' + vdoRef.current?.videoWidth)
