@@ -9,18 +9,23 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
     return (
         <nav className="flex items-center justify-between flex-wrap bg-teal-950 p-3">
             <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+            
             {
-                session? <Link href="/api/auth/signout" className="text-sm lg:flex-grow">
+                session? <Link href="/api/auth/signout" className="text-sm ">
                             <div className="inline-block text-sm px-4 py-2 leading-none border rounded font-bold text-teal-800 bg-white border-white hover:border-transparent hover:text-white hover:bg-teal-900 mt-4 lg:mt-0">
                                 Sign-Out of {session.user?.name}
                             </div>
                         </Link>
-                        :<Link href="/api/auth/signin" className="text-sm lg:flex-grow">
+                        :<Link href="/api/auth/signin" className="text-sm ">
                             <div className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
                                 Sign-In
                             </div>
                         </Link>
             }
+                <div className="flex items-center flex-shrink-0 flex-grow text-white ml-6 " >
+                <Link href={"./mybooking"}><span>mybooking</span>
+                
+                </Link></div>
                 <div className="flex items-center ml-4">
                     <TopMenuItem title="Booking" pageRef="/booking"/>
                 </div>
