@@ -8,6 +8,9 @@ import AddHospitalForm from '@/components/AddHospitalForm';
 
 export default function page() {
   const hospitals = getHospitals()
+  if(hospitals){
+    console.log(hospitals)
+  }
   
   return (
     <main className='p-5'>
