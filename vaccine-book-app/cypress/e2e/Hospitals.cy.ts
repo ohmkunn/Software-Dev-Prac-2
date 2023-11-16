@@ -25,6 +25,6 @@ describe('User Interaction', () => {
     cy.url().should('include', '/hospital');
 
     // Check if there are at least 3 images on the /hospital page
-    cy.get('img').should('have.length.at.least', 3);
+    cy.get('div.hospitalcatalog').find('img').should('have.length.at.least', 3);
   });
 });

@@ -36,7 +36,7 @@ export default async function hospitalCatalog({hospitalJson}: {hospitalJson: Obj
     return (
     <>
     Explore {hospitalJson.count} 
-    <div style={{margin:"20px", display:"flex",
+    <div className='hospitalcatalog' style={{margin:"20px", display:"flex",
         flexDirection:"row", alignContent:"space-around",
         justifyContent: "space-around", flexWrap:"wrap", padding:"10px"}}>
         {
